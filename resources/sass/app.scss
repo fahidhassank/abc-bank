@@ -1,0 +1,187 @@
+//Variables
+$primary: #4476c2;
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 740px,
+	xl: 760px,
+	xxl: 780px,
+);
+$list-group-item-padding-y: 1.25rem;
+$list-group-item-padding-x: 1.25rem;
+$input-padding-y: 0.5rem;
+$input-padding-x: 1rem;
+
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/accordion";
+// @import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+// @import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/toasts";
+// @import "~bootstrap/scss/modal";
+// @import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/spinners";
+// @import "~bootstrap/scss/offcanvas";
+// @import "~bootstrap/scss/placeholders";
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities/api";
+
+// Toastr
+@import "~toastr/toastr";
+
+:root {
+	font-size: 14px;
+}
+
+body {
+	min-height: 100vh;
+	color: #444;
+	font-weight: 500;
+
+	font-family: "Open Sans", sans-serif;
+}
+
+label:not(.form-check-label) {
+	color: #666;
+	font-weight: 700;
+	font-size: 0.9rem;
+	margin-bottom: 0.25rem;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+small {
+	font-size: 0.9em;
+}
+
+.form-check-input:hover,
+.form-check-label:hover {
+	cursor: pointer;
+}
+
+#auth-card {
+	width: 100%;
+	max-width: 350px;
+}
+
+.card {
+	background-color: #fff;
+	@extend .shadow-sm, .border, .rounded;
+	.card-body {
+		@extend .p-4;
+	}
+}
+
+#navbar {
+	.nav-link {
+		display: block;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		font-weight: 500;
+		transition: all 0.25s;
+		border-bottom: 2px solid transparent;
+
+		// Styling for logout button
+		&.btn {
+			border-radius: 0;
+			border: none;
+			border-bottom: 2px solid transparent;
+			&:focus {
+				box-shadow: none;
+			}
+		}
+
+		// Decrease nav-link padding and remove border on mobile view (screen-width < 768px)
+		@include media-breakpoint-down(md) {
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			border: none;
+		}
+
+		&.active,
+		&:focus,
+		&:hover {
+			color: $primary;
+			text-decoration: none;
+			border-bottom-color: $primary;
+		}
+	}
+}
+
+.toast {
+	font-size: 1rem;
+}
+
+.table-responsive {
+	overflow-x: auto;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: 1rem;
+	}
+
+	th {
+		@extend .border-top, .border-bottom;
+	}
+
+	td {
+		@extend .border-bottom;
+		transition: background-color 0.25s;
+	}
+
+	tr:hover {
+		td {
+			background-color: #eee;
+		}
+	}
+
+	th {
+		font-weight: normal;
+		color: #888;
+	}
+}
+
+.pagination {
+	@extend .m-3;
+
+	.page-item a:hover {
+		text-decoration: none;
+	}
+}
