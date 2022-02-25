@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-white border-bottom navbar-expand-md px-1">
     <div class="container">
-        <a class="navbar-brand" href="#">ABC Bank</a>
+        <a class="navbar-brand" href="{{ route('home') }}">ABC Bank</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
