@@ -34,7 +34,7 @@ class TransactionController extends Controller
 			return $this->sendResponse(true, [], 'Money deposited successfully');
 		} catch (\Throwable $e) {
 			DB::rollBack();
-			throw $e;
+			// throw $e;
 			return $this->sendResponse(false, [], "Couldn't transfer deposit");
 		}
 	}
@@ -60,7 +60,7 @@ class TransactionController extends Controller
 			return $this->sendResponse(true, [], 'Money withdrawed successfully');
 		} catch (\Throwable $e) {
 			DB::rollBack();
-			throw $e;
+			// throw $e;
 			return $this->sendResponse(false, [], "Couldn't withdraw money");
 		}
 	}
@@ -96,7 +96,7 @@ class TransactionController extends Controller
 			return $this->sendResponse(true, [], 'Money transfered successfully');
 		} catch (\Throwable $e) {
 			DB::rollBack();
-			throw $e;
+			// throw $e;
 			return $this->sendResponse(false, [], "Couldn't transfer money");
 		}
 	}
