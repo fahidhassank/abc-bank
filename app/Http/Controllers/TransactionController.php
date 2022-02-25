@@ -75,7 +75,7 @@ class TransactionController extends Controller
 		]);
 
 		if ($request->user()->email == $request->email) {
-			throw ValidationException::withMessages(['amount' => ["You cannot transfer money to yourself"]]);
+			throw ValidationException::withMessages(['email' => ["You cannot transfer money to yourself"]]);
 		}
 
 		try {
@@ -86,7 +86,7 @@ class TransactionController extends Controller
 
 			if ($sender->balance < $request->amount) {
 				DB::rollBack();
-				throw ValidationException::withMessages(['email' => ["You don't have enough money in your account"]]);
+				throw ValidationException::withMessages(['amount' => ["You don't have enough money in your account"]]);
 			}
 
 			TransactionHelper::withdraw($sender, $request->amount, 'Transfer to ' . $receiver->email);
