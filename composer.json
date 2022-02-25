@@ -40,8 +40,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "App\\Helpers\\CurrencyHelper.php",
-            "App\\Helpers\\RouteHelper.php"
+            "app\\Helpers\\CurrencyHelper.php",
+            "app\\Helpers\\RouteHelper.php"
         ]
     },
     "autoload-dev": {
