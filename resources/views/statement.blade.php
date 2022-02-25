@@ -37,4 +37,5 @@
             </div>
             {{ $transactions->links() }}
         </div>
-    @endsection
+    </div>
+@endsection
