@@ -23,6 +23,7 @@ export default {
 	methods: {
 		save() {
 			this.loading = true;
+			this.errors = {};
 			axios
 				.post("/withdraw", {
 					amount: this.amount,

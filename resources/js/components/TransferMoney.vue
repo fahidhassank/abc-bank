@@ -29,6 +29,7 @@ export default {
 	methods: {
 		save() {
 			this.loading = true;
+			this.errors = {};
 			axios
 				.post("/transfer", {
 					amount: this.amount,
